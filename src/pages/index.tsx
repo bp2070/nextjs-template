@@ -2,8 +2,8 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import { trpc } from '../utils/trpc'
 
-const Home: NextPage = (props: any) => {
-  const {data, isLoading} = trpc.useQuery(["getAll"]);
+const Home: NextPage = () => {
+  const {data, isLoading} = trpc.useQuery(["new.get-all"]);
 
   if(!data || isLoading) return <div>Loading...</div>;
 
